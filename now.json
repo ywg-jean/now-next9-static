@@ -3,12 +3,12 @@
   "name": "now-next9-static",
   "regions": ["cdg"],
   "builds": [
-    { "src": "www/package.json", "use": "@now/next" }
+    { "src": "public/package.json", "use": "@now/next" }
   ],
   "routes": [        
     {
       "src": "/(.*)",
-      "dest": "/www/$1",
+      "dest": "/public/$1",
       "headers": {
         "x-request-path": "$1"
       }

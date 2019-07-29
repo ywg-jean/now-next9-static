@@ -2,10 +2,10 @@
   "name": "now-nextjs-workspaces",
   "private": true,
   "workspaces": [
-    "www"
+    "public"
   ],
   "devDependencies": {
-    "now": "^15.8.5",
+    "now": "^15.8.7",
     "prettier": "^1.18.2"
   }
 }
