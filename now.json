@@ -6,12 +6,19 @@
     { "src": "public/package.json", "use": "@now/next" }
   ],
   "routes": [        
-    {
+   {
       "src": "/(.*)",
       "dest": "/public/$1",
       "headers": {
         "x-request-path": "$1"
       }
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/public/$1.html",
+      "headers": {
+        "x-request-path": "$1"
+      }
     }
-  ]  
+   ]  
 }
