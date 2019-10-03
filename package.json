@@ -5,7 +5,7 @@
     "public"
   ],
   "devDependencies": {
-    "now": "^15.8.7",
+    "now": "^16.3.0",
     "prettier": "^1.18.2"
   }
 }
