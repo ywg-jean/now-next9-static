@@ -25,7 +25,8 @@
     
    ]  ,
    "env":{
-     "NODE_ICU_DATA":"/var/task/node_modules/full-icu/"
+    "LAMDA_HOME":"/var/task/" ,
+    "NODE_ICU_DATA":"/var/task/node_modules/full-icu/"
    }
 
 }
