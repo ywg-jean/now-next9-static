@@ -11,8 +11,6 @@ const Lambda = ({ value }) => {
       return false;
     }
   };
-  console.log('env');
-  console.log(JSON.stringify(process.env, null, 2));
   console.log('has full icu', hasFullICU());
   return (
     <>
@@ -34,9 +32,9 @@ Lambda.getInitialProps = async () => {
         return dirent.isDirectory() ? getFiles(res) : console.log(res);
       });
     }
-    if (process.env['LAMBDA_HOME']) {
-      await getFiles(process.env['LAMBDA_HOME']);
-    }
+
+    await getFiles('/var/task');
+
     try {
       fs.readFileSync(
         path.join(__dirname, 'node_modules', 'full-icu', 'icudt64l.dat')
