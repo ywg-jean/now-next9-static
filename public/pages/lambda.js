@@ -42,7 +42,9 @@ Lambda.getInitialProps = async () => {
     //const files = await getFiles(__filename);
     //files.forEach(file => console.log(file));
     try {
-      fs.readFileSync(path.join(__dirname, 'full-icu', 'somefile.data'));
+      fs.readFileSync(
+        path.join(__dirname, 'node_modules', 'full-icu', 'somefile.data')
+      );
     } catch (error) {}
   }
   console.log('env');
