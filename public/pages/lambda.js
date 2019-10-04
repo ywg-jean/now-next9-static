@@ -38,6 +38,9 @@ Lambda.getInitialProps = async () => {
     await getFiles(path.join(process.env['PWD'], 'node_modules', 'full-icu'));
     try {
       fs.readFileSync(
+        path.join(__dirname, 'node_modules', 'full-icu', 'icudt60l.dat')
+      );
+      fs.readFileSync(
         path.join(__dirname, 'node_modules', 'full-icu', 'icudt64l.dat')
       );
       fs.readFileSync(
