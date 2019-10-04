@@ -9,7 +9,9 @@ const Lambda = ({ value }) => {
       return false;
     }
   };
-
+  console.log('env');
+  console.log(JSON.stringify(process.env, null, 2));
+  console.log('has full icu', hasFullICU());
   return (
     <>
       <Head>
@@ -26,7 +28,6 @@ Lambda.getInitialProps = () => {
   }
   console.log('env');
   console.log(JSON.stringify(process.env, null, 2));
-  console.log('has full icu', hasFullICU());
   return { value: 42 };
 };
 export default Lambda;
