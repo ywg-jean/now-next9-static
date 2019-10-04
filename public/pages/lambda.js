@@ -31,11 +31,11 @@ Lambda.getInitialProps = async () => {
       const dirents = await fs.promises.readdir(dir, { withFileTypes: true });
       dirents.forEach(dirent => {
         const res = path.resolve(dir, dirent.name);
-        return dirent.isDirectory() ? getFiles(res + '/') : console.log(res);
+        return dirent.isDirectory() ? getFiles(res) : console.log(res);
       });
     }
     if (process.env['LAMBDA_HOME']) {
-      const files = await getFiles(process.env['LAMBDA_HOME']);
+      await getFiles(process.env['LAMBDA_HOME']);
     }
     try {
       fs.readFileSync(
