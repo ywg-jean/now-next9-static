@@ -32,8 +32,9 @@ Lambda.getInitialProps = async () => {
         return dirent.isDirectory() ? getFiles(res) : console.log(res);
       });
     }
+    console.log('PWD', process.env['PWD']);
+    console.log('LAMBDA_HOME', process.env['PWD']);
 
-    await getFiles(process.env['PWD']);
     await getFiles(path.join(process.env['PWD'], 'node_modules', 'full-icu'));
     try {
       fs.readFileSync(
