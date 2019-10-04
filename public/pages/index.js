@@ -11,6 +11,8 @@ function Index() {
     }
     getDate();
   }, []);
+  console.log('env');
+  console.log(JSON.stringify(process.env, null, 2));
   return (
     <main>
       <Head>
