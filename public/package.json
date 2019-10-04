@@ -4,7 +4,8 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "now-build":"node dump.js && next build"
   },
   "engines": { "node": "10.x" },
   "dependencies": {
