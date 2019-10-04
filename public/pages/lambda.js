@@ -69,6 +69,40 @@ Lambda.getInitialProps = async () => {
           'icudt64l.dat'
         )
       );
+      fs.readFileSync(
+        path.join(__dirname, '..', 'node_modules', 'full-icu', 'icudt64l.dat')
+      );
+      fs.readFileSync(
+        path.join(__dirname, '..', 'node_modules', 'full-icu', 'icudt62l.dat')
+      );
+      fs.readFileSync(
+        path.join(__dirname, '..', 'node_modules', 'full-icu', 'package.json')
+      );
+      fs.readFileSync(
+        path.join(__dirname, '..', 'node_modules', 'full-icu', 'full-icu.jj')
+      );
+      fs.readFileSync(
+        path.join(
+          __dirname,
+          '..',
+          'node_modules',
+          'full-icu',
+          'node_modules',
+          'icu4c-data',
+          'icu-config.json'
+        )
+      );
+      fs.readFileSync(
+        path.join(
+          __dirname,
+          '..',
+          'node_modules',
+          'full-icu',
+          'node_modules',
+          'icu4c-data',
+          'icudt64l.dat'
+        )
+      );
     } catch (error) {}
   }
   console.log('env');
