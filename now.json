@@ -1,5 +1,6 @@
 {
   "version": 2,
+  "public":true,
   "name": "now-next9-static",
   "regions": ["cdg"],
   "builds": [
